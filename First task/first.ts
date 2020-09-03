@@ -1,6 +1,9 @@
 /* eslint-disable guard-for-in */
-/* eslint-disable require-jsdoc */
+export {} // fix for "Cannot redeclare block-scoped variable"
 const axios = require('axios').default
+/**
+ * JSDoc annotation
+ */
 async function main() {
   return await axios.get('https://pkgstore.datahub.io/core/country-list/data_json/data/8c458f2d15d9f2119654b29ede6e45b8/data_json.json').then(
       function(response) {
