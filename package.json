@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "@google-cloud/functions-framework": "^1.7.1",
     "@google-cloud/storage": "^5.3.0",
     "axios": "^0.20.0",
     "ts-node": "^9.0.0",
@@ -18,7 +19,7 @@
     "xo": "^0.33.1"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "functions-framework --target=webContries"
   },
   "repository": {
     "type": "git",
@@ -30,5 +31,7 @@
     "url": "https://github.com/MagHErmit/typescript-learning/issues"
   },
   "homepage": "https://github.com/MagHErmit/typescript-learning#readme",
-  "xo": { "space": true }
+  "xo": {
+    "space": true
+  }
 }
