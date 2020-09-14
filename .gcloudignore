@@ -17,3 +17,7 @@ node_modules
 #!include:.gitignore
 src
 .vscode
+.eslintrs.json
+tsconfig.json
+*.js.map
+deploy
