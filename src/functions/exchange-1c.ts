@@ -149,7 +149,7 @@ export class Exchange1c extends AbstractCloudFunction {
   }
 
   public static async httpHandler(request: Request, response: Response): Promise<void> {
-    await (await Exchange1c.create('/settings/your-site-name')).onHttpRequest(request, response);
+    await (await Exchange1c.create('/settings/exchange-1c.com')).onHttpRequest(request, response);
   }
 
   /**
@@ -417,7 +417,7 @@ export class Exchange1c extends AbstractCloudFunction {
 
     if (filename.startsWith('import_files')) {
       await this.saveToStorage(
-        '1c-exchange-files',
+        '1c-exchange-files-228228',
         posix.dirname(filename),
         '',
         posix.basename(filename),
@@ -425,7 +425,7 @@ export class Exchange1c extends AbstractCloudFunction {
       );
     } else {
       await this.saveToStorage(
-        '1c-exchange-catalog',
+        '1c-exchange-catalog-228228',
         '',
         DateTime.utc().toFormat('yyyy-MM-dd_HH-mm-ss-SSSZZZ'),
         filename,
@@ -454,7 +454,7 @@ export class Exchange1c extends AbstractCloudFunction {
 
     if (filename.startsWith('import_files')) {
       await this.saveToStorage(
-        '1c-exchange-report',
+        '1c-exchange-report-228228',
         posix.dirname(filename),
         '',
         posix.basename(filename),
@@ -462,7 +462,7 @@ export class Exchange1c extends AbstractCloudFunction {
       );
     } else {
       await this.saveToStorage(
-        '1c-exchange-report',
+        '1c-exchange-report-228228',
         '',
         '',
         filename,
